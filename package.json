@@ -1,0 +1,42 @@
+{
+	"name": "@devgonzi/reaction-roles",
+	"version": "0.1.0",
+	"description": "Reaction role and button role bindings for discord.js v14 bots.",
+	"keywords": ["discord", "discord.js", "reaction-role", "button-role", "roles", "discord-bot"],
+	"license": "MIT",
+	"private": false,
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"files": ["dist", "README.md", "LICENSE"],
+	"sideEffects": false,
+	"engines": {
+		"node": ">=18"
+	},
+	"peerDependencies": {
+		"discord.js": "^14.19.2"
+	},
+	"scripts": {
+		"build": "tsup",
+		"clean": "rm -rf dist",
+		"test": "vitest run",
+		"lint": "biome check .",
+		"typecheck": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/node": "^22.0.0",
+		"discord.js": "^14.19.2",
+		"tsup": "^8.3.5",
+		"typescript": "^5.7.2",
+		"vitest": "^2.1.8"
+	}
+}
